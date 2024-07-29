@@ -1,0 +1,6 @@
+<% @flats.each do |flat| %>
+  <%= flat.name %>
+  <%= flat.description %>
+  <%= flat.price %>
+  <%= link_to "Voir le bel appart", flat_path(flat) %><br><br>
+<% end %>

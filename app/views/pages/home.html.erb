@@ -1,2 +1,13 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+
+<% @flats.each do |flat| %>
+  <div class="flat">
+    <h2><%= flat.name %></h2>
+    <p><%= flat.description %></p>
+    <p>Price: <%= flat.price %></p>
+    <%= link_to "Voir le bel appart", flat_path(flat) %><br><br>
+  </div>
+<% end %>
+
+<%= link_to "Voir les apparts", flats_path %>

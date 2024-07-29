@@ -1,0 +1,14 @@
+<h1>Réservations</h1>
+<p>Vous avez <%= @bookings.count %> réservations</p>
+
+<% @bookings.each do |booking| %>
+  <p>
+    <strong>Start Date:</strong> <%= booking.start_date %><br>
+    <strong>End Date:</strong> <%= booking.end_date %><br>
+    <strong>Flat Name:</strong> <%= booking.flat.name %><br>
+    <strong>Price:</strong> <%= booking.flat.price %><br>
+    <strong>Description:</strong> <%= booking.flat.description %><br>
+    <%= link_to "Voir le booking", booking_path(booking) %>
+  </p>
+  <br>
+<% end %>
